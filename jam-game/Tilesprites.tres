@@ -1,33 +1,36 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://myor1c8a1qil"]
 
-[ext_resource type="Texture2D" uid="uid://ct1slblbw8oh" path="res://Sprites/New Piskel (24).png" id="1_k7v88"]
-[ext_resource type="Texture2D" uid="uid://dwpmi88ll1pho" path="res://Sprites/Placeholdertiles.png" id="2_78eha"]
+[ext_resource type="Texture2D" uid="uid://xne7jmyus3is" path="res://Sprites/Tiles.png" id="1_lejl8"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yx1dk"]
-atlas = ExtResource("1_k7v88")
-region = Rect2(0, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7v88"]
+atlas = ExtResource("1_lejl8")
+region = Rect2(0, 48, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5o474"]
-atlas = ExtResource("2_78eha")
+[sub_resource type="AtlasTexture" id="AtlasTexture_78eha"]
+atlas = ExtResource("1_lejl8")
 region = Rect2(32, 16, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hf1df"]
-atlas = ExtResource("2_78eha")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6slwd"]
-atlas = ExtResource("2_78eha")
+[sub_resource type="AtlasTexture" id="AtlasTexture_r31al"]
+atlas = ExtResource("1_lejl8")
 region = Rect2(32, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vn0ji"]
-atlas = ExtResource("2_78eha")
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2q7c"]
+atlas = ExtResource("1_lejl8")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kfhyk"]
+atlas = ExtResource("1_lejl8")
 region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5t6u4"]
+atlas = ExtResource("1_lejl8")
+region = Rect2(16, 32, 16, 16)
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yx1dk")
+"texture": SubResource("AtlasTexture_k7v88")
 }],
 "loop": true,
 "name": &"Base",
@@ -35,7 +38,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5o474")
+"texture": SubResource("AtlasTexture_78eha")
 }],
 "loop": true,
 "name": &"Conveyor",
@@ -43,25 +46,48 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hf1df")
+"texture": SubResource("AtlasTexture_r31al")
 }],
 "loop": true,
-"name": &"Eraser",
+"name": &"Scribe",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6slwd")
-}],
-"loop": true,
-"name": &"Goal",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vn0ji")
+"texture": SubResource("AtlasTexture_o2q7c")
 }],
 "loop": true,
 "name": &"Start",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kfhyk")
+}],
+"loop": true,
+"name": &"Trash",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5t6u4")
+}],
+"loop": true,
+"name": &"Wall",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation_6",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation_7",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation_8",
 "speed": 5.0
 }]

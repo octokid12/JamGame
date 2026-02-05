@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c6t0vh22qvmvh"]
+
+[ext_resource type="Script" uid="uid://borq7uaaoxj0x" path="res://Tiles/Scripts/conveyortile.gd" id="1_v6cmr"]
+[ext_resource type="SpriteFrames" uid="uid://myor1c8a1qil" path="res://Tilesprites.tres" id="2_c4vnp"]
+
+[node name="Tiletemplate" type="Node2D" unique_id=503580613]
+script = ExtResource("1_v6cmr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=805019966]
+texture_filter = 1
+rotation = -3.1415927
+sprite_frames = ExtResource("2_c4vnp")
+animation = &"Conveyor"
+autoplay = "Conveyor"

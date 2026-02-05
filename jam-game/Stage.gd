@@ -12,8 +12,15 @@ func _process(delta: float) -> void:
 
 
 func _on_tilea_pressed() -> void:
-	Global.selectedtile = 3
+	Global.selectedtile = 1
 
 
 func _on_tile_b_pressed() -> void:
-	Global.selectedtile = 4
+	Global.selectedtile = 5
+
+
+func _on_down_pressed() -> void:
+	Global.selectedtile = 6
+
+func _on_up_pressed() -> void:
+	Global.selectedtile = 2

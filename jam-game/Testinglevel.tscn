@@ -1,0 +1,95 @@
+[gd_scene format=4 uid="uid://b23a5f0m6gpup"]
+
+[ext_resource type="Script" uid="uid://dwyn4tcj5nxlt" path="res://Stage.gd" id="1_483ml"]
+[ext_resource type="Texture2D" uid="uid://xne7jmyus3is" path="res://Sprites/Tiles.png" id="2_6saet"]
+[ext_resource type="Script" uid="uid://dhn2iaj8aj4fp" path="res://Tiles/Scripts/guy.gd" id="3_nefs4"]
+[ext_resource type="PackedScene" uid="uid://c6t0vh22qvmvh" path="res://Tiles/Scenes/LConveryortile.tscn" id="4_l4fu0"]
+[ext_resource type="PackedScene" uid="uid://xu1u72kj5dtd" path="res://Tiles/Scenes/UConveyortile.tscn" id="5_6saet"]
+[ext_resource type="PackedScene" uid="uid://fnxtbnbyqnfs" path="res://Tiles/Scenes/RConveyortile.tscn" id="7_o3kdv"]
+[ext_resource type="Script" uid="uid://dhq8epsa0oqw3" path="res://tiles.gd" id="8_wa7lc"]
+[ext_resource type="Texture2D" uid="uid://8ata0ud2yf5p" path="res://Sprites/Tiles-11.png.png" id="9_5pxag"]
+[ext_resource type="PackedScene" uid="uid://dyvjex8fg00kd" path="res://Tiles/Scenes/Dconveyortile.tscn" id="9_nefs4"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4d7sh"]
+texture = ExtResource("2_6saet")
+2:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_hqns4"]
+sources/1 = SubResource("TileSetAtlasSource_4d7sh")
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_0e48y"]
+resource_name = "Tiles"
+scenes/1/scene = ExtResource("4_l4fu0")
+scenes/1/display_placeholder = true
+scenes/2/scene = ExtResource("5_6saet")
+scenes/5/scene = ExtResource("7_o3kdv")
+scenes/6/scene = ExtResource("9_nefs4")
+
+[sub_resource type="TileSet" id="TileSet_epypp"]
+sources/2 = SubResource("TileSetScenesCollectionSource_0e48y")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ir8iy"]
+texture = ExtResource("9_5pxag")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_x0ka3"]
+sources/0 = SubResource("TileSetAtlasSource_ir8iy")
+
+[node name="Stage" type="Node2D" unique_id=1956449348]
+script = ExtResource("1_483ml")
+
+[node name="Tilemaps" type="Node2D" parent="." unique_id=1456466069]
+
+[node name="Guy" type="TileMapLayer" parent="Tilemaps" unique_id=1582392980]
+z_index = 20
+texture_filter = 1
+tile_set = SubResource("TileSet_hqns4")
+script = ExtResource("3_nefs4")
+
+[node name="Tiles" type="TileMapLayer" parent="Tilemaps" unique_id=1110639736]
+texture_filter = 1
+tile_set = SubResource("TileSet_epypp")
+script = ExtResource("8_wa7lc")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Tilemaps" unique_id=455517357]
+z_index = -10
+tile_map_data = PackedByteArray("AAD1//r/AAAAAAAAAAD1//v/AAAAAAAAAAD1//z/AAAAAAAAAAD1//3/AAAAAAAAAAD1//7/AAAAAAAAAAD1////AAAAAAAAAAD1/wAAAAAAAAAAAAD1/wEAAAAAAAAAAAD1/wIAAAAAAAAAAAD1/wMAAAAAAAAAAAD1/wQAAAAAAAAAAAD2//r/AAAAAAAAAAD2//v/AAAAAAAAAAD2//z/AAAAAAAAAAD2//3/AAAAAAAAAAD2//7/AAAAAAAAAAD2////AAAAAAAAAAD2/wAAAAAAAAAAAAD2/wEAAAAAAAAAAAD2/wIAAAAAAAAAAAD2/wMAAAAAAAAAAAD2/wQAAAAAAAAAAAD3//r/AAAAAAAAAAD3//v/AAAAAAAAAAD3//z/AAAAAAAAAAD3//3/AAAAAAAAAAD3//7/AAAAAAAAAAD3////AAAAAAAAAAD3/wAAAAAAAAAAAAD3/wEAAAAAAAAAAAD3/wIAAAAAAAAAAAD3/wMAAAAAAAAAAAD3/wQAAAAAAAAAAAD4//r/AAAAAAAAAAD4//v/AAAAAAAAAAD4//z/AAAAAAAAAAD4//3/AAAAAAAAAAD4//7/AAAAAAAAAAD4////AAAAAAAAAAD4/wAAAAAAAAAAAAD4/wEAAAAAAAAAAAD4/wIAAAAAAAAAAAD4/wMAAAAAAAAAAAD4/wQAAAAAAAAAAAD5//r/AAAAAAAAAAD5//v/AAAAAAAAAAD5//z/AAAAAAAAAAD5//3/AAAAAAAAAAD5//7/AAAAAAAAAAD5////AAAAAAAAAAD5/wAAAAAAAAAAAAD5/wEAAAAAAAAAAAD5/wIAAAAAAAAAAAD5/wMAAAAAAAAAAAD5/wQAAAAAAAAAAAD6//r/AAAAAAAAAAD6//v/AAAAAAAAAAD6//z/AAAAAAAAAAD6//3/AAAAAAAAAAD6//7/AAAAAAAAAAD6////AAAAAAAAAAD6/wAAAAAAAAAAAAD6/wEAAAAAAAAAAAD6/wIAAAAAAAAAAAD6/wMAAAAAAAAAAAD6/wQAAAAAAAAAAAD7//r/AAAAAAAAAAD7//v/AAAAAAAAAAD7//z/AAAAAAAAAAD7//3/AAAAAAAAAAD7//7/AAAAAAAAAAD7////AAAAAAAAAAD7/wAAAAAAAAAAAAD7/wEAAAAAAAAAAAD7/wIAAAAAAAAAAAD7/wMAAAAAAAAAAAD7/wQAAAAAAAAAAAD8//r/AAAAAAAAAAD8//v/AAAAAAAAAAD8//z/AAAAAAAAAAD8//3/AAAAAAAAAAD8//7/AAAAAAAAAAD8////AAAAAAAAAAD8/wAAAAAAAAAAAAD8/wEAAAAAAAAAAAD8/wIAAAAAAAAAAAD8/wMAAAAAAAAAAAD8/wQAAAAAAAAAAAD9//r/AAAAAAAAAAD9//v/AAAAAAAAAAD9//z/AAAAAAAAAAD9//3/AAAAAAAAAAD9//7/AAAAAAAAAAD9////AAAAAAAAAAD9/wAAAAAAAAAAAAD9/wEAAAAAAAAAAAD9/wIAAAAAAAAAAAD9/wMAAAAAAAAAAAD9/wQAAAAAAAAAAAD+//r/AAAAAAAAAAD+//v/AAAAAAAAAAD+//z/AAAAAAAAAAD+//3/AAAAAAAAAAD+//7/AAAAAAAAAAD+////AAAAAAAAAAD+/wAAAAAAAAAAAAD+/wEAAAAAAAAAAAD+/wIAAAAAAAAAAAD+/wMAAAAAAAAAAAD+/wQAAAAAAAAAAAD///r/AAAAAAAAAAD///v/AAAAAAAAAAD///z/AAAAAAAAAAD///3/AAAAAAAAAAD///7/AAAAAAAAAAD/////AAAAAAAAAAD//wAAAAAAAAAAAAD//wEAAAAAAAAAAAD//wIAAAAAAAAAAAD//wMAAAAAAAAAAAD//wQAAAAAAAAAAAAAAPr/AAAAAAAAAAAAAPv/AAAAAAAAAAAAAPz/AAAAAAAAAAAAAP3/AAAAAAAAAAAAAP7/AAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAABAPr/AAAAAAAAAAABAPv/AAAAAAAAAAABAPz/AAAAAAAAAAABAP3/AAAAAAAAAAABAP7/AAAAAAAAAAABAP//AAAAAAAAAAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAABAAMAAAAAAAAAAAABAAQAAAAAAAAAAAACAPr/AAAAAAAAAAACAPv/AAAAAAAAAAACAPz/AAAAAAAAAAACAP3/AAAAAAAAAAACAP7/AAAAAAAAAAACAP//AAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAACAAIAAAAAAAAAAAACAAMAAAAAAAAAAAACAAQAAAAAAAAAAAADAPr/AAAAAAAAAAADAPv/AAAAAAAAAAADAPz/AAAAAAAAAAADAP3/AAAAAAAAAAADAP7/AAAAAAAAAAADAP//AAAAAAAAAAADAAAAAAAAAAAAAAADAAEAAAAAAAAAAAADAAIAAAAAAAAAAAADAAMAAAAAAAAAAAADAAQAAAAAAAAAAAAEAPr/AAAAAAAAAAAEAPv/AAAAAAAAAAAEAPz/AAAAAAAAAAAEAP3/AAAAAAAAAAAEAP7/AAAAAAAAAAAEAP//AAAAAAAAAAAEAAAAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAIAAAAAAAAAAAAEAAMAAAAAAAAAAAAEAAQAAAAAAAAAAAAFAPr/AAAAAAAAAAAFAPv/AAAAAAAAAAAFAPz/AAAAAAAAAAAFAP3/AAAAAAAAAAAFAP7/AAAAAAAAAAAFAP//AAAAAAAAAAAFAAAAAAAAAAAAAAAFAAEAAAAAAAAAAAAFAAIAAAAAAAAAAAAFAAMAAAAAAAAAAAAFAAQAAAAAAAAAAAAGAPr/AAAAAAAAAAAGAPv/AAAAAAAAAAAGAPz/AAAAAAAAAAAGAP3/AAAAAAAAAAAGAP7/AAAAAAAAAAAGAP//AAAAAAAAAAAGAAAAAAAAAAAAAAAGAAEAAAAAAAAAAAAGAAIAAAAAAAAAAAAGAAMAAAAAAAAAAAAGAAQAAAAAAAAAAAAHAPr/AAAAAAAAAAAHAPv/AAAAAAAAAAAHAPz/AAAAAAAAAAAHAP3/AAAAAAAAAAAHAP7/AAAAAAAAAAAHAP//AAAAAAAAAAAHAAAAAAAAAAAAAAAHAAEAAAAAAAAAAAAHAAIAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAQAAAAAAAAAAAAIAPr/AAAAAAAAAAAIAPv/AAAAAAAAAAAIAPz/AAAAAAAAAAAIAP3/AAAAAAAAAAAIAP7/AAAAAAAAAAAIAP//AAAAAAAAAAAIAAAAAAAAAAAAAAAIAAEAAAAAAAAAAAAIAAIAAAAAAAAAAAAIAAMAAAAAAAAAAAAIAAQAAAAAAAAAAAAJAPr/AAAAAAAAAAAJAPv/AAAAAAAAAAAJAPz/AAAAAAAAAAAJAP3/AAAAAAAAAAAJAP7/AAAAAAAAAAAJAP//AAAAAAAAAAAJAAAAAAAAAAAAAAAJAAEAAAAAAAAAAAAJAAIAAAAAAAAAAAAJAAMAAAAAAAAAAAAJAAQAAAAAAAAAAAAKAPr/AAAAAAAAAAAKAPv/AAAAAAAAAAAKAPz/AAAAAAAAAAAKAP3/AAAAAAAAAAAKAP7/AAAAAAAAAAAKAP//AAAAAAAAAAAKAAAAAAAAAAAAAAAKAAEAAAAAAAAAAAAKAAIAAAAAAAAAAAAKAAMAAAAAAAAAAAAKAAQAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_x0ka3")
+
+[node name="Placeholders" type="Node2D" parent="." unique_id=1319885678]
+
+[node name="Camera2D" type="Camera2D" parent="Placeholders" unique_id=1702557475]
+zoom = Vector2(5, 5)
+
+[node name="Tilea" type="Button" parent="Placeholders" unique_id=1742615357]
+offset_left = -108.0
+offset_top = 20.0
+offset_right = -62.0
+offset_bottom = 51.0
+text = "LT"
+
+[node name="TileB" type="Button" parent="Placeholders" unique_id=220826873]
+offset_left = -53.0
+offset_top = 21.0
+offset_right = -6.0
+offset_bottom = 52.0
+text = "RT"
+
+[node name="Down" type="Button" parent="Placeholders" unique_id=1544217431]
+offset_left = -104.0
+offset_top = -54.0
+offset_right = -75.0
+offset_bottom = -23.0
+text = "DT"
+
+[node name="Up" type="Button" parent="Placeholders" unique_id=1900290898]
+offset_left = -107.0
+offset_top = -21.0
+offset_right = -78.0
+offset_bottom = 10.0
+text = "UT"
+
+[connection signal="pressed" from="Placeholders/Tilea" to="." method="_on_tilea_pressed"]
+[connection signal="pressed" from="Placeholders/TileB" to="." method="_on_tile_b_pressed"]
+[connection signal="pressed" from="Placeholders/Down" to="." method="_on_down_pressed"]
+[connection signal="pressed" from="Placeholders/Up" to="." method="_on_up_pressed"]
