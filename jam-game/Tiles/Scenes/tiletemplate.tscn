@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bx3wwpxdiye7n"]
+
+[ext_resource type="Script" uid="uid://dtg618ln4u4tw" path="res://tiletemplate.gd" id="1_fmuc2"]
+[ext_resource type="Texture2D" uid="uid://ct1slblbw8oh" path="res://Sprites/New Piskel (24).png" id="2_ypydx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yx1dk"]
+atlas = ExtResource("2_ypydx")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k2l7t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yx1dk")
+}],
+"loop": true,
+"name": &"Base",
+"speed": 5.0
+}]
+
+[node name="Tiletemplate" type="Node2D" unique_id=503580613]
+script = ExtResource("1_fmuc2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=805019966]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_k2l7t")
+animation = &"Base"
+autoplay = "Base"

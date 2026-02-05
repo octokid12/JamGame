@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b6hdx20ao3li7"]
+
+[ext_resource type="Texture2D" uid="uid://dwpmi88ll1pho" path="res://Sprites/Placeholdertiles.png" id="1_yi0vg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnuk2"]
+atlas = ExtResource("1_yi0vg")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hlp7m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnuk2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Payload" type="Node2D" unique_id=1321372085]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1730044951]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_hlp7m")

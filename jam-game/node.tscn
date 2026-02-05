@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c55d2666ui5lx"]
+
+[ext_resource type="Script" uid="uid://fl5iqdfx2tx5" path="res://Tiles/Scripts/Global.gd" id="1_sy5k4"]
+
+[node name="Node" type="Node" unique_id=621951764]
+script = ExtResource("1_sy5k4")
