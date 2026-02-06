@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dbsppiwipmlvb"]
+
+[ext_resource type="Script" uid="uid://dtg618ln4u4tw" path="res://tiletemplate.gd" id="1_hytnn"]
+[ext_resource type="SpriteFrames" uid="uid://myor1c8a1qil" path="res://Tilesprites.tres" id="2_427h5"]
+
+[node name="Tiletemplate" type="Node2D" unique_id=503580613]
+script = ExtResource("1_hytnn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=805019966]
+texture_filter = 1
+sprite_frames = ExtResource("2_427h5")
+animation = &"Scribe"
+autoplay = "Scribe"

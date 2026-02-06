@@ -2,20 +2,35 @@
 
 [ext_resource type="Script" uid="uid://dwyn4tcj5nxlt" path="res://Stage.gd" id="1_483ml"]
 [ext_resource type="Texture2D" uid="uid://xne7jmyus3is" path="res://Sprites/Tiles.png" id="2_6saet"]
+[ext_resource type="Texture2D" uid="uid://dbakscb32flhr" path="res://Sprites/Balls.png" id="3_6saet"]
 [ext_resource type="Script" uid="uid://dhn2iaj8aj4fp" path="res://Tiles/Scripts/guy.gd" id="3_nefs4"]
-[ext_resource type="PackedScene" uid="uid://c6t0vh22qvmvh" path="res://Tiles/Scenes/LConveryortile.tscn" id="4_l4fu0"]
-[ext_resource type="PackedScene" uid="uid://xu1u72kj5dtd" path="res://Tiles/Scenes/UConveyortile.tscn" id="5_6saet"]
-[ext_resource type="PackedScene" uid="uid://fnxtbnbyqnfs" path="res://Tiles/Scenes/RConveyortile.tscn" id="7_o3kdv"]
+[ext_resource type="PackedScene" uid="uid://c6t0vh22qvmvh" path="res://Tiles/Scenes/Conveyors/LConveryortile.tscn" id="4_l4fu0"]
+[ext_resource type="PackedScene" uid="uid://xu1u72kj5dtd" path="res://Tiles/Scenes/Conveyors/UConveyortile.tscn" id="5_6saet"]
+[ext_resource type="PackedScene" uid="uid://fnxtbnbyqnfs" path="res://Tiles/Scenes/Conveyors/RConveyortile.tscn" id="7_o3kdv"]
 [ext_resource type="Script" uid="uid://dhq8epsa0oqw3" path="res://tiles.gd" id="8_wa7lc"]
 [ext_resource type="Texture2D" uid="uid://8ata0ud2yf5p" path="res://Sprites/Tiles-11.png.png" id="9_5pxag"]
-[ext_resource type="PackedScene" uid="uid://dyvjex8fg00kd" path="res://Tiles/Scenes/Dconveyortile.tscn" id="9_nefs4"]
+[ext_resource type="PackedScene" uid="uid://dyvjex8fg00kd" path="res://Tiles/Scenes/Conveyors/Dconveyortile.tscn" id="9_nefs4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4d7sh"]
 texture = ExtResource("2_6saet")
 2:3/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nefs4"]
+texture = ExtResource("3_6saet")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+0:3/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_hqns4"]
 sources/1 = SubResource("TileSetAtlasSource_4d7sh")
+sources/2 = SubResource("TileSetAtlasSource_nefs4")
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_0e48y"]
 resource_name = "Tiles"
@@ -43,6 +58,7 @@ script = ExtResource("1_483ml")
 [node name="Guy" type="TileMapLayer" parent="Tilemaps" unique_id=1582392980]
 z_index = 20
 texture_filter = 1
+tile_map_data = PackedByteArray("AAAFAP//AQACAAMAAAA=")
 tile_set = SubResource("TileSet_hqns4")
 script = ExtResource("3_nefs4")
 
