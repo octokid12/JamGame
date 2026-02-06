@@ -9,5 +9,5 @@ script = ExtResource("1_hytnn")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=805019966]
 texture_filter = 1
 sprite_frames = ExtResource("2_427h5")
-animation = &"Scribe"
-autoplay = "Scribe"
+animation = &"Detractor"
+autoplay = "Detractor"

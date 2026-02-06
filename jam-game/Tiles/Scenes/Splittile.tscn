@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://c45o4d077n8dl"]
+
+[ext_resource type="Script" uid="uid://dtg618ln4u4tw" path="res://tiletemplate.gd" id="1_1esd7"]
+[ext_resource type="SpriteFrames" uid="uid://myor1c8a1qil" path="res://Tilesprites.tres" id="2_5cn5y"]
+
+[node name="Tiletemplate" type="Node2D" unique_id=503580613]
+script = ExtResource("1_1esd7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=805019966]
+texture_filter = 1
+sprite_frames = ExtResource("2_5cn5y")
+animation = &"Split"
+autoplay = "Split"

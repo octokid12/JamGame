@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dj0m11tnd87wv"]
+
+[ext_resource type="Texture2D" uid="uid://xne7jmyus3is" path="res://Sprites/Tiles.png" id="1_k2lot"]
+[ext_resource type="Texture2D" uid="uid://dbakscb32flhr" path="res://Sprites/Balls.png" id="2_0p5sk"]
+[ext_resource type="Script" uid="uid://dhn2iaj8aj4fp" path="res://Tiles/Scripts/guy.gd" id="3_p2e0m"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4d7sh"]
+texture = ExtResource("1_k2lot")
+2:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nefs4"]
+texture = ExtResource("2_0p5sk")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+0:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_hqns4"]
+sources/1 = SubResource("TileSetAtlasSource_4d7sh")
+sources/2 = SubResource("TileSetAtlasSource_nefs4")
+
+[node name="Guy" type="TileMapLayer" unique_id=1226242164]
+z_index = 20
+texture_filter = 1
+tile_set = SubResource("TileSet_hqns4")
+script = ExtResource("3_p2e0m")

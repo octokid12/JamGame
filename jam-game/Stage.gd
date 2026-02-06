@@ -24,3 +24,14 @@ func _on_down_pressed() -> void:
 
 func _on_up_pressed() -> void:
 	Global.selectedtile = 2
+
+func _on_sub_pressed() -> void:
+	Global.selectedtile = 8
+
+
+func _on_down_2_pressed() -> void:
+	Global.selectedtile = 3
+
+
+func _on_sadness_pressed() -> void:
+	Global.selectedtile = 7

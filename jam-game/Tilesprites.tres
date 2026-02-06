@@ -10,9 +10,17 @@ region = Rect2(0, 48, 16, 16)
 atlas = ExtResource("1_lejl8")
 region = Rect2(32, 16, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_lejl8"]
+atlas = ExtResource("1_lejl8")
+region = Rect2(16, 0, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_r31al"]
 atlas = ExtResource("1_lejl8")
 region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_clp1e"]
+atlas = ExtResource("1_lejl8")
+region = Rect2(0, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o2q7c"]
 atlas = ExtResource("1_lejl8")
@@ -46,10 +54,26 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_lejl8")
+}],
+"loop": true,
+"name": &"Detractor",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_r31al")
 }],
 "loop": true,
 "name": &"Scribe",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_clp1e")
+}],
+"loop": true,
+"name": &"Split",
 "speed": 5.0
 }, {
 "frames": [{
@@ -74,16 +98,6 @@ animations = [{
 }],
 "loop": true,
 "name": &"Wall",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"new_animation_6",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"new_animation_7",
 "speed": 5.0
 }, {
 "frames": [],

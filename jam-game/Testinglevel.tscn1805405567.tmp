@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://dwyn4tcj5nxlt" path="res://Stage.gd" id="1_483ml"]
 [ext_resource type="PackedScene" uid="uid://c6t0vh22qvmvh" path="res://Tiles/Scenes/Conveyors/LConveryortile.tscn" id="4_l4fu0"]
 [ext_resource type="PackedScene" uid="uid://xu1u72kj5dtd" path="res://Tiles/Scenes/Conveyors/UConveyortile.tscn" id="5_6saet"]
-[ext_resource type="PackedScene" uid="uid://c45o4d077n8dl" path="res://Tiles/Scenes/Splittile.tscn" id="5_nefs4"]
 [ext_resource type="PackedScene" uid="uid://fnxtbnbyqnfs" path="res://Tiles/Scenes/Conveyors/RConveyortile.tscn" id="7_o3kdv"]
 [ext_resource type="Script" uid="uid://dhq8epsa0oqw3" path="res://tiles.gd" id="8_wa7lc"]
 [ext_resource type="Texture2D" uid="uid://8ata0ud2yf5p" path="res://Sprites/Tiles-11.png.png" id="9_5pxag"]
@@ -21,7 +20,6 @@ resource_name = "Tiles"
 scenes/1/scene = ExtResource("4_l4fu0")
 scenes/1/display_placeholder = true
 scenes/2/scene = ExtResource("5_6saet")
-scenes/3/scene = ExtResource("5_nefs4")
 scenes/5/scene = ExtResource("7_o3kdv")
 scenes/6/scene = ExtResource("9_nefs4")
 scenes/7/scene = ExtResource("10_nefs4")
@@ -49,17 +47,17 @@ script = ExtResource("8_wa7lc")
 zoom = Vector2(3, 3)
 
 [node name="Tilea" type="Button" parent="Placeholders" unique_id=1742615357]
-offset_left = -106.0
+offset_left = -110.0
 offset_top = -30.0
-offset_right = -60.0
+offset_right = -64.0
 offset_bottom = 1.0
 text = "LT"
 
 [node name="TileB" type="Button" parent="Placeholders" unique_id=220826873]
-offset_left = -53.0
-offset_top = -29.0
-offset_right = -6.0
-offset_bottom = 2.0
+offset_left = -59.0
+offset_top = -30.0
+offset_right = -12.0
+offset_bottom = 1.0
 text = "RT"
 
 [node name="Down" type="Button" parent="Placeholders" unique_id=1544217431]
@@ -76,7 +74,7 @@ offset_right = -37.0
 offset_bottom = -33.0
 text = "UT"
 
-[node name="destruct" type="Button" parent="Placeholders" unique_id=868359627]
+[node name="Sub" type="Button" parent="Placeholders" unique_id=868359627]
 offset_left = -105.0
 offset_top = 7.0
 offset_right = -7.0
@@ -88,19 +86,11 @@ offset_left = -104.0
 offset_top = 36.0
 offset_right = -7.0
 offset_bottom = 67.0
-text = "Mathematics"
-
-[node name="Sadness" type="Button" parent="Placeholders" unique_id=953269836]
-offset_left = -33.0
-offset_top = -64.0
-offset_right = -3.0
-offset_bottom = -33.0
-text = "Q4"
+text = "Downgrade"
 
 [connection signal="pressed" from="Placeholders/Tilea" to="." method="_on_tilea_pressed"]
 [connection signal="pressed" from="Placeholders/TileB" to="." method="_on_tile_b_pressed"]
 [connection signal="pressed" from="Placeholders/Down" to="." method="_on_down_pressed"]
 [connection signal="pressed" from="Placeholders/Up" to="." method="_on_up_pressed"]
-[connection signal="pressed" from="Placeholders/destruct" to="." method="_on_sub_pressed"]
+[connection signal="pressed" from="Placeholders/Sub" to="." method="_on_sub_pressed"]
 [connection signal="pressed" from="Placeholders/Down2" to="." method="_on_down_2_pressed"]
-[connection signal="pressed" from="Placeholders/Sadness" to="." method="_on_sadness_pressed"]
